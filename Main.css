@@ -1,67 +1,23 @@
-/* File: proj04BayyurtDimitrovQian.Main.css*/
-/* Names: Izge Bayyurt, Anton Dimitrov, Leo Qian*/
-/* Class: CS361*/
-/* Project 4*/
-/* Date: 2/28/2022*/
+/*
+ * File: proj4CorrelEnglishBogatyrev.Main.css
+ * Names: Cassidy Correl, Nick English, Philipp Bogatyrev
+ * Class: CS361
+ * Project 4
+ * Date: 2/28/2022
+ */
 
-/*Style toolbar buttons*/
-#compile {
-    -fx-background-color: #ADD8E6;
-	-fx-border-radius: .25em;
-	-fx-background-radius: .25em;
+/* Style the Hello button */
+#hello {
+	-fx-background-color: #90EE90; 
+	-fx-border-radius: .25em; 
+	-fx-background-radius: .25em; 
 	-fx-border-color: #000000;
 }
 
-#compileRun {
-    -fx-background-color: #98FB98;
-	-fx-border-radius: .25em;
-	-fx-background-radius: .25em;
+/* Style the Goodbye button */
+#goodbye{
+	-fx-background-color: #FFC0CB; 
+	-fx-border-radius: .25em; 
+	-fx-background-radius: .25em;  
 	-fx-border-color: #000000;
-}
-
-#stop {
-    -fx-background-color: #E78587;
-	-fx-border-radius: .25em;
-	-fx-background-radius: .25em;
-	-fx-border-color: #000000;
-}
-
-/* Make font size to 10 */
-.root {
-    -fx-font-size: 10pt;
-}
-
-.keyword {
-    -fx-fill: purple;
-    -fx-font-weight: bold;
-}
-.semicolon {
-    -fx-font-weight: bold;
-}
-.paren {
-    -fx-fill: teal;
-    -fx-font-weight: bold;
-}
-.bracket {
-    -fx-fill: teal;
-    -fx-font-weight: bold;
-}
-.brace {
-    -fx-fill: teal;
-    -fx-font-weight: bold;
-}
-.string {
-    -fx-fill: blue;
-}
-
-.comment {
-	-fx-fill: cadetblue;
-}
-
-.cInt {
-    -fx-fill: firebrick;
-}
-
-.paragraph-box:has-caret {
-    -fx-background-color: #f2f9fc;
 }
