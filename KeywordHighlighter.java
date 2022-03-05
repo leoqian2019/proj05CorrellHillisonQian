@@ -52,9 +52,10 @@ public class KeywordHighlighter {
     private static final String SEMICOLON_PATTERN = "\\;";
     private static final String STRING_PATTERN = "\"([^\"\\\\]|\\\\.)*\"";
     private static final String COMMENT_PATTERN = "//[^\n]*" + "|" + "/\\*(.|\\R)*?\\*/";
+    private static final String CONSTANT_INT_PATTERN = "\\s[0-9]+";
 
     private static final Pattern PATTERN = Pattern.compile(
-                    "(?<KEYWORD>" + KEYWORD_PATTERN + ")"
+                    "(?<CINT>" + CONSTANT_INT_PATTERN + ")" + "|(?<KEYWORD>" + KEYWORD_PATTERN + ")"
                     + "|(?<PAREN>" + PAREN_PATTERN + ")"
                     + "|(?<BRACE>" + BRACE_PATTERN + ")"
                     + "|(?<BRACKET>" + BRACKET_PATTERN + ")"
@@ -109,14 +110,15 @@ public class KeywordHighlighter {
                 = new StyleSpansBuilder<>();
         while (matcher.find()) {
             String styleClass =
-                matcher.group("KEYWORD") != null ? "keyword" :
-                    matcher.group("PAREN") != null ? "paren" :
-                        matcher.group("BRACE") != null ? "brace" :
-                            matcher.group("BRACKET") != null ? "bracket" :
-                                 matcher.group("SEMICOLON") != null ? "semicolon" :
-                                    matcher.group("STRING") != null ? "string" :
-                                        matcher.group("COMMENT") != null ? "comment" :
-                                            null; /* never happens */
+                    matcher.group("CINT") != null ? "cInt" :
+                        matcher.group("KEYWORD") != null ? "keyword" :
+                            matcher.group("PAREN") != null ? "paren" :
+                                matcher.group("BRACE") != null ? "brace" :
+                                    matcher.group("BRACKET") != null ? "bracket" :
+                                         matcher.group("SEMICOLON") != null ? "semicolon" :
+                                            matcher.group("STRING") != null ? "string" :
+                                                matcher.group("COMMENT") != null ? "comment" :
+                                                    null; /* never happens */
             assert styleClass != null;
             spansBuilder.add(Collections.emptyList(), matcher.start() - lastKwEnd);
             spansBuilder.add(Collections.singleton(styleClass), matcher.end() - matcher.start());

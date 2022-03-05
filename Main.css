@@ -39,11 +39,11 @@
     -fx-font-weight: bold;
 }
 .paren {
-    -fx-fill: firebrick;
+    -fx-fill: teal;
     -fx-font-weight: bold;
 }
 .bracket {
-    -fx-fill: darkgreen;
+    -fx-fill: teal;
     -fx-font-weight: bold;
 }
 .brace {
@@ -56,6 +56,10 @@
 
 .comment {
 	-fx-fill: cadetblue;
+}
+
+.cInt {
+    -fx-fill: firebrick;
 }
 
 .paragraph-box:has-caret {
