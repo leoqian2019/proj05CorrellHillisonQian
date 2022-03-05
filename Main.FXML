@@ -24,29 +24,45 @@
       prefHeight="600" prefWidth="600" xmlns="http://javafx.com/javafx/8"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="proj04BayyurtDimitrovQian.Controller">
     <children>
+
         <MenuBar>
             <menus >
+
                 <Menu text="File" >
                     <items>
-                        <MenuItem fx:id="about" text="About..." onAction="#handleAboutMenuItem" Accelerator="Shortcut+Shift+A"/>
+                        <MenuItem fx:id="about" text="About..." onAction="#handleAboutMenuItem"
+                                  Accelerator="Shortcut+Shift+A"/>
                         <SeparatorMenuItem> </SeparatorMenuItem>
-                        <MenuItem fx:id="newTab" text="New" onAction="#handleNewMenuItem" Accelerator="Shortcut+N"/>
-                        <MenuItem fx:id="open" text="Open..." onAction="#handleOpenMenuItem" Accelerator="Shortcut+O"/>
-                        <MenuItem fx:id="close" text="Close" onAction="#handleCloseMenuItem" Accelerator="Shortcut+Shift+C"/>
-                        <MenuItem fx:id="save" text="Save" onAction="#handleSaveMenuItem" Accelerator="Shortcut+S"/>
-                        <MenuItem fx:id="saveAs" text="Save As..." onAction="#handleSaveAsMenuItem" Accelerator="Shortcut+Shift+S"/>
+                        <MenuItem fx:id="newTab" text="New" onAction="#handleNewMenuItem"
+                                  Accelerator="Shortcut+N"/>
+                        <MenuItem fx:id="open" text="Open..." onAction="#handleOpenMenuItem"
+                                  Accelerator="Shortcut+O"/>
+                        <MenuItem fx:id="close" text="Close" onAction="#handleCloseMenuItem"
+                                  Accelerator="Shortcut+Shift+C"/>
+                        <MenuItem fx:id="save" text="Save" onAction="#handleSaveMenuItem"
+                                  Accelerator="Shortcut+S"/>
+                        <MenuItem fx:id="saveAs" text="Save As..." onAction="#handleSaveAsMenuItem"
+                                  Accelerator="Shortcut+Shift+S"/>
                         <SeparatorMenuItem> </SeparatorMenuItem>
-                        <MenuItem fx:id="exit" text="Exit" onAction="#handleExitMenuItem" Accelerator="Shortcut+Shift+E"/>
+                        <MenuItem fx:id="exit" text="Exit" onAction="#handleExitMenuItem"
+                                  Accelerator="Shortcut+Shift+E"/>
                     </items>
+
                 </Menu>
                  <Menu text="Edit" fx:id="edit">
                     <items>
-                        <MenuItem fx:id="undo" text="Undo" onAction="#handleUndo" Accelerator="Shortcut+Z"/>
-                        <MenuItem fx:id="redo" text="Redo" onAction="#handleRedo" Accelerator="Shortcut+Shift+Z"/>
-                        <MenuItem fx:id="cut" text="Cut" onAction="#handleCut" Accelerator="Shortcut+X"/>
-                        <MenuItem fx:id="copy" text="Copy" onAction="#handleCopy" Accelerator="Shortcut+C"/>
-                        <MenuItem fx:id="paste" text="Paste" onAction="#handlePaste" Accelerator="Shortcut+V"/>
-                        <MenuItem fx:id="selectAll" text="Select all" onAction="#handleSelectAll" Accelerator="Shortcut+A"/>
+                        <MenuItem fx:id="undo" text="Undo" onAction="#handleUndo"
+                                  Accelerator="Shortcut+Z"/>
+                        <MenuItem fx:id="redo" text="Redo" onAction="#handleRedo"
+                                  Accelerator="Shortcut+Shift+Z"/>
+                        <MenuItem fx:id="cut" text="Cut" onAction="#handleCut"
+                                  Accelerator="Shortcut+X"/>
+                        <MenuItem fx:id="copy" text="Copy" onAction="#handleCopy"
+                                  Accelerator="Shortcut+C"/>
+                        <MenuItem fx:id="paste" text="Paste" onAction="#handlePaste"
+                                  Accelerator="Shortcut+V"/>
+                        <MenuItem fx:id="selectAll" text="Select all" onAction="#handleSelectAll"
+                                  Accelerator="Shortcut+A"/>
                     </items>
                 </Menu>
             </menus>
@@ -62,6 +78,7 @@
                     onAction="#handleStopButton" text="Stop" />
         </ToolBar>
 
+        <!-- Area storing Tabs -->
         <TabPane fx:id="tabPane" layoutX="0.0" layoutY="30.0" VBox.vgrow="ALWAYS">
             <Tab text="Untitled" onCloseRequest="#handleCloseMenuItem" id = "Untitled">
                 <VirtualizedScrollPane VBox.vgrow="ALWAYS" fx:id="vScrollPane">
@@ -72,10 +89,12 @@
             </Tab>
         </TabPane>
 
-        <TitledPane text="Console" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+        <!-- Console area -->
+        <TitledPane text="Console" >
             <content>
                 <StyleClassedTextArea />
             </content>
         </TitledPane>
+
     </children>
 </VBox>
