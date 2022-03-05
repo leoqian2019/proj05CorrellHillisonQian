@@ -57,6 +57,21 @@ public class Controller {
     private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMddyy-hhmmss.SSS");
 
 
+
+    @FXML
+    private void handleCompileButton(){
+
+    }
+
+    @FXML
+    private void handleCompileRunButton(){
+
+    }
+
+    @FXML
+    private void handleStopButton(){
+
+    }
     /**
      * Handler method for about menu bar item. When the about item of the
      * menu bar is clicked, an alert window appears displaying basic information
